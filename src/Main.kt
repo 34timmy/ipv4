@@ -31,6 +31,7 @@ fun isUnique(value: Long, bitSet: LongBitSet): Boolean {
 
 private val crc = CRC32()
 private fun crc32Checksum(data: ByteArray): Long {
+    crc.reset()
     crc.update(data)
     return crc.value
 }
